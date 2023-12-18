@@ -14,6 +14,7 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     public List<Usuario> getUsuarios() {
+
         return this.usuarioRepository.findAll();
     }
 
@@ -22,7 +23,7 @@ public class UsuarioService {
     }
 
     @Transactional
-    public Usuario inserirouAtualizar (Usuario usuario) {
+    public Usuario inserirOuAtualizar (Usuario usuario) {
         Usuario usuarioInserido = this.usuarioRepository.save(usuario);
         return usuarioInserido;
     }
