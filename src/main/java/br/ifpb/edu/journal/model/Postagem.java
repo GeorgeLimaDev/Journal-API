@@ -6,9 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "tb_postagem")
 public class Postagem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String autor;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario autor;
     private String conteudo;
 
     public long getId() {
@@ -19,11 +21,11 @@ public class Postagem {
         this.id = id;
     }
 
-    public String getAutor() {
+    public Usuario getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Usuario autor) {
         this.autor = autor;
     }
 

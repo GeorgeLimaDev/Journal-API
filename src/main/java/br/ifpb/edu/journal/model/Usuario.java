@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "tb_usuario")
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nickname;
     private String senha;
@@ -16,7 +16,7 @@ public class Usuario {
     private String nome;
     private String email;
     private String avatar;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id")
     private List<Postagem> postagens;
 
