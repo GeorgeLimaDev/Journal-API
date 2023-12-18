@@ -1,4 +1,4 @@
-package br.ifpb.edu.journal.journal;
+package br.ifpb.edu.journal;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

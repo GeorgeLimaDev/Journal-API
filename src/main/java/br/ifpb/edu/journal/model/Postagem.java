@@ -2,9 +2,11 @@ package br.ifpb.edu.journal.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "tb_postagem")
-public class Postagem {
+public class Postagem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

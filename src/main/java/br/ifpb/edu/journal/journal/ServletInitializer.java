@@ -1,5 +1,6 @@
 package br.ifpb.edu.journal.journal;
 
+import br.ifpb.edu.journal.JournalApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

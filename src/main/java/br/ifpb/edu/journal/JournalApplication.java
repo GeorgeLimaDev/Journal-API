@@ -1,4 +1,4 @@
-package br.ifpb.edu.journal.journal;
+package br.ifpb.edu.journal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
