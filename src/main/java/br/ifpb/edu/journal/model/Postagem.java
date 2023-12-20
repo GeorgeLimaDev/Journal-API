@@ -10,8 +10,10 @@ public class Postagem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
+    @ManyToOne()
+    @JoinTable(name = "bd_usuario",
+    joinColumns = @JoinColumn(name = "usuario_id"),
+    inverseJoinColumns = @JoinColumn(name = "postagem_id"))
     private Usuario autor;
     private String conteudo;
 
