@@ -35,6 +35,7 @@ public class PostagemController {
 
     @DeleteMapping("/postagens/{id}")
     public void apagarPostagem(@PathVariable("id") Long id) {
+        System.out.println("Chamou excluir");
         this.postagemService.apagar(id);
     }
 }
